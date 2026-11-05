@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Cup Cafe</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Connect JavaScript file -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Welcome to Cozy Cup Cafe</h1>
+
+        <!-- Task 8: Opening status -->
+        <p id="opening-status"></p>
+
+        <!-- Task 3: Theme switcher -->
+        <button id="theme-toggle" type="button">
+            Toggle Light/Dark Mode
+        </button>
+    </header>
+
+    <main>
+
+        <!-- Task 6: Read More article -->
+        <article>
+            <h2>About Our Cafe</h2>
+
+            <p>
+                Cozy Cup Cafe is a friendly place where you can enjoy
+                fresh coffee, delicious pastries, and a relaxing atmosphere.
+            </p>
+
+            <p id="extra-text" class="hidden">
+                We prepare our drinks with care and serve freshly baked
+                croissants every day. Our goal is to make every visit
+                comfortable and memorable for our customers.
+            </p>
+
+            <button id="read-more" type="button">Read More</button>
+        </article>
+
+        <!-- Menu Table -->
+        <section>
+            <h2>Our Menu</h2>
+
+            <!-- Task 7: Category filters -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all"
+                    type="button">All</button>
+
+                <button class="filter-btn" data-filter="drinks"
+                    type="button">Drinks</button>
+
+                <button class="filter-btn" data-filter="pastries"
+                    type="button">Pastries</button>
+            </div>
+
+            <!-- Task 2: Table row highlighting -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+
+                <tbody id="menu-table">
+                    <tr data-category="drinks">
+                        <td>Espresso</td>
+                        <td>Drinks</td>
+                        <td>$3</td>
+                    </tr>
+
+                    <tr data-category="drinks">
+                        <td>Cappuccino</td>
+                        <td>Drinks</td>
+                        <td>$5</td>
+                    </tr>
+
+                    <tr data-category="drinks">
+                        <td>Latte</td>
+                        <td>Drinks</td>
+                        <td>$4</td>
+                    </tr>
+
+                    <tr data-category="pastries">
+                        <td>Croissant</td>
+                        <td>Pastries</td>
+                        <td>$4</td>
+                    </tr>
+
+                    <tr data-category="pastries">
+                        <td>Chocolate Muffin</td>
+                        <td>Pastries</td>
+                        <td>$3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Task 4: Order Total Calculator -->
+        <section>
+            <h2>Select Your Order</h2>
+
+            <div class="order-item" data-category="drinks">
+                <label>
+                    <input type="checkbox" class="menu-checkbox" value="3">
+                    Espresso - $3
+                </label>
+            </div>
+
+            <div class="order-item" data-category="drinks">
+                <label>
+                    <input type="checkbox" class="menu-checkbox" value="5">
+                    Cappuccino - $5
+                </label>
+            </div>
+
+            <div class="order-item" data-category="drinks">
+                <label>
+                    <input type="checkbox" class="menu-checkbox" value="4">
+                    Latte - $4
+                </label>
+            </div>
+
+            <div class="order-item" data-category="pastries">
+                <label>
+                    <input type="checkbox" class="menu-checkbox" value="4">
+                    Croissant - $4
+                </label>
+            </div>
+
+            <div class="order-item" data-category="pastries">
+                <label>
+                    <input type="checkbox" class="menu-checkbox" value="3">
+                    Chocolate Muffin - $3
+                </label>
+            </div>
+
+            <p id="total" aria-live="polite">Total: $0</p>
+        </section>
+
+        <!-- Tasks 1, 5 and 9: Feedback Form -->
+        <section>
+            <h2>Contact & Feedback Form</h2>
+
+            <form id="feedback-form">
+
+                <label for="username">Username:</label>
+                <input type="text" id="username"
+                    placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email"
+                    placeholder="Enter your email" required>
+
+                <!-- Task 5: Birth year -->
+                <label for="birth-year">Birth Year:</label>
+                <input type="text" id="birth-year"
+                    placeholder="e.g. 2002">
+
+                <button type="button" id="check-age">
+                    Check Discount
+                </button>
+
+                <p id="discount-message" aria-live="polite"></p>
+
+                <!-- Task 9: Character counter -->
+                <label for="special-notes">
+                    Special Order Instructions:
+                </label>
+
+                <textarea id="special-notes"
+                    maxlength="100"
+                    rows="4"
+                    placeholder="Write your special requests..."></textarea>
+
+                <p id="char-count" aria-live="polite">
+                    100 characters remaining
+                </p>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+
+            <!-- Task 1: Personalized message -->
+            <p id="form-message" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cozy Cup Cafe. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
